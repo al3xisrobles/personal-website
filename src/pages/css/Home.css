@@ -200,9 +200,15 @@ nav.top-nav .socials a img:hover {
     SECTIONS
               */
 
-.sections {
+.sections .cut-margins {
   margin-left: 8vw;
   margin-right: 8vw;
+}
+
+.sections #contact {
+  display: flex;
+  background-color: black;
+  justify-content: center;
 }
 
 /*
@@ -215,8 +221,8 @@ nav.top-nav .socials a img:hover {
   height: 50px;
   z-index: 10;
   position: fixed;
-  right: 1vw;
-  top: 2vh;
+  right: 10px;
+  top: 10px;
 }
 
 .menu p {

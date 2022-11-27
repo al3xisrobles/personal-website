@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
+
 import './css/Home.css'
+import { AnimatePresence, motion } from "framer-motion";
+import Skills from '../components/Skills';
+import Projects from '../components/Projects';
+import Footer from '../components/Footer';
+
 import LinkedIn from '../images/linkedin.png'
 import Github from '../images/github.png'
-import Skills from '../components/Skills';
-import Experience from '../components/Experience';
-import Projects from '../components/Projects';
-import { AnimatePresence, motion } from "framer-motion";
-import AlexisLogoWhite from '../images/AlexisLogoWhite.png'
-import AlexisLogoBlack from '../images/AlexisLogoBlack.png'
-import AlexisLogoColored from '../images/AlexisLogoColored.png'
+import WhiteLogo from '../images/WhiteLogo.png'
+import BlackLogo from '../images/BlackLogo.png'
+import ColoredLogo from '../images/ColoredLogo.png'
 
 function Home() {
 
@@ -59,12 +61,15 @@ function Home() {
         <>
           <div className='body'>
 
+            {/* Warning above Navbar */}
             <div className="in-prog">
               <p>WARNING: THIS WEBSITE IS UNDER CONSTRUCTION</p>
             </div>
 
+            {/* Northwestern BG */}
             <div className='bg'></div>
 
+            {/* Navbar */}
             <nav role="navigation" className="top-nav">
               <motion.div className='website-title'
                 initial={{ x: -150 }}
@@ -75,10 +80,10 @@ function Home() {
                 <a tabIndex={1} href="http://www.alexis-robles.com">
                 <AnimatePresence>
                   {!websiteLogo &&
-                  <img src={AlexisLogoWhite} alt="alexis-robles.com"></img>
+                  <img src={WhiteLogo} alt="alexis-robles.com"></img>
                   }
                   {websiteLogo &&
-                  <img src={AlexisLogoColored} alt="alexis-robles.com"></img>
+                  <img src={ColoredLogo} alt="alexis-robles.com"></img>
                   }
                 </AnimatePresence>
                 </a>
@@ -86,7 +91,7 @@ function Home() {
               <div className='list-of-contents'>
                 <ul>
                   <li tabIndex={2}><a href="#skills">// skills</a></li>
-                  <li tabIndex={3}><a href="#work-experience">// work experience</a></li>
+                  <li tabIndex={3}><a href="#projects">// projects</a></li>
                   <li tabIndex={4}><a href="#contact">// contact</a></li>
                 </ul>
               </div>
@@ -103,6 +108,7 @@ function Home() {
               </motion.div>
             </nav>
 
+            {/* Hero */}
             <section id='hero-section'>
               <div className='hero-text-wrapper'>
                 <div className='hero-text'>
@@ -121,6 +127,7 @@ function Home() {
               </div>
             </section>
 
+            {/* Menu Button */}
             {scrollPosition >= menuStartToFadeInY &&
               <div className="menu" style={{ opacity: menuOpacity }}>
                 <motion.p
@@ -143,18 +150,22 @@ function Home() {
               </div>
             }
 
+            {/* Page Sections */}
             <div className="sections">
-              <div id="skills">
-                <Skills/>
+              <div className="cut-margins">
+                <section id="skills">
+                  <Skills/>
+                </section>
+                <section id="projects">
+                  <Projects/>
+                </section>
               </div>
-              <div id="experience">
-                {/* <Experience/> */}
-              </div>
-              <div id="projects">
-                <Projects/>
-              </div>
+              <section id="contact">
+                <Footer/>
+              </section>
             </div>
 
+            {/* Menu Screen */}
             <AnimatePresence>
               {menuPlaceholder &&
                 <>
@@ -169,7 +180,7 @@ function Home() {
                         <a tabIndex={1} href="#"
                           onMouseEnter={() => setWebsiteTitle(!websiteTitle)}
                           onMouseLeave={() => setWebsiteTitle(!websiteTitle)}>
-                          <img src={AlexisLogoBlack} alt="alexis-robles.com"/>
+                          <img src={BlackLogo} alt="alexis-robles.com"/>
                           <AnimatePresence>
                             {websiteTitle &&
                             <div className="website-title-popout">
@@ -199,7 +210,7 @@ function Home() {
                                     delay: 0.06
                                   }}}
                                   transition={{ opacity: { duration: 0.5 }, x: { duration: 0.3 }}}>
-                                    <a href="#work-experience" rel="noreferrer">Work Experience</a>
+                                    <a href="#projects" rel="noreferrer">Projects</a>
                         </motion.p>
                         <motion.p onClick={() => setPlaceholder(!menuPlaceholder)}
                                   initial={{ x: -50,opacity: 0 }}

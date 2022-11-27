@@ -48,3 +48,9 @@
 .text-section .subj-section {
   color: rgb(164, 164, 164);
 }
+
+.card:hover .subj-section {
+  background-image: linear-gradient(164deg, rgba(254,98,254,1) 5%, rgba(253,144,45,1) 30%, rgba(255,235,148,1) 45%);
+  background-clip: text;
+  color: transparent;
+}
