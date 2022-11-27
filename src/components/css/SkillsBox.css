@@ -1,0 +1,69 @@
+.expertise-box {
+  width: 100%;
+  height: 100%;
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid white;
+  overflow: hidden;
+}
+
+.grid-item {
+  width: 85%;
+  height: 85%;
+}
+
+.grid-item .grid-item-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.grid-item .grid-item-title {
+  display: inline-flex;
+}
+
+.grid-item .grid-item-title p {
+  margin-top: 5%;
+  margin-bottom: 0;
+  overflow-wrap: break-word;
+}
+
+.title-decor {
+  position: absolute;
+  z-index: -1;
+  background-image: linear-gradient(164deg, rgba(254, 98, 254, 0.714) 30%, rgba(255, 235, 148, 0.593) 80%);
+  width: 33px;
+  max-width: 20vw;
+  height: 0.2rem;
+  transform: translate(110px, 10px);
+}
+
+.vertical-line {
+  position: absolute;
+  width: 2px;
+  height: 110px;
+  transform: translate(24px, 34px);
+  background-color: rgb(109, 109, 109);
+}
+
+.line-numbers {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  color: rgb(109, 109, 109);
+  margin-left: .4rem;
+  margin-top: 30px;
+}
+
+.line-numbers li {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.text {
+  margin-left: 2.6rem;
+  margin-top: 2rem;
+  line-height: 23px;
+}

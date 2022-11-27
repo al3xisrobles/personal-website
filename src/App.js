@@ -1,16 +1,10 @@
-import './App.css';
-import Title from './components/Title';
+import Home from './pages/Home';
 
 function App() {
 
-  var http = require("http");
-  setInterval(function() {
-      http.get("http://www.alexis-robles.com/");
-  }, 300000);
-
   return (
     <>
-      <Title/>
+      <Home/>
     </>
   );
 }
