@@ -1,8 +1,9 @@
 .about-me {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   max-width: 1800px;
+  width: 100%;
 }
 
 .about-title {
@@ -56,11 +57,11 @@
 .gradient {
   position: absolute;
   translate: none;
-  scale: .7;
+  scale: .6;
   opacity: 0.4;
   width: 1200px;
   z-index: -1;
-  top: 75%;
+  top: 70%;
   left: 20%;
   right: 20%;
 }
