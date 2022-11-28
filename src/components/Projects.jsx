@@ -43,7 +43,7 @@ function Projects() {
               imagePath={'tournament'}
               handleClick={() => openClose(2)}
               text="Collaborated with a partner through git to create both a unique registration website for events that shows current participants and
-              a dynamic bracket UI for live user experience during a philanthropic volleyball tournament with React.js and Flask. Pictured to the left is the live bracket that participants of the tournament could visit on their mobile phone live to see how their team is doing. The web app was connected to a Microsoft Excel sheet that was updated as the tournament went on."
+              a dynamic bracket UI for live user experience during a philanthropic volleyball tournament with React.js and Flask. Pictured to the left is the live bracket that participants of the tournament could visit on their mobile phone live to see how their team is doing. The web app was connected to a Google spreadsheet that was updated as the tournament went on."
               buttonSrc="https://github.com/al3xisrobles/Live-Tournament-Tracker"
               buttonText="Project Repo"/>}
           </div>
