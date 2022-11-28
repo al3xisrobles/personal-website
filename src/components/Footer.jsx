@@ -39,7 +39,7 @@ function Footer() {
 
             {/* Email */}
             <motion.div className="motion-div" initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { delay: 0 }}} transition={{ opacity: { duration: 0.5 }, y: { duration: 0.3 }}}>
-              <a className="anchor" href="mailto:alexis.robles49@gmail.com" target="_blank" rel="noreferrer">
+              <a className="anchor" href="mailto:alexis.robles49@gmail.com" target="_blank" rel="noreferrer" tabIndex={8}>
                 <div className='btn email'>
                   <p>alexis.robles49@gmail.com</p>
                   <div className="decor email-decor"></div>
@@ -49,7 +49,7 @@ function Footer() {
 
             {/* LinkedIn */}
             <motion.div className="motion-div" initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { delay: 0.02 }}} transition={{ opacity: { duration: 0.5 }, y: { duration: 0.3 }}}>
-              <a className="anchor" href="https://www.linkedin.com/in/alexisdrobles/" target="_blank" rel="noreferrer">
+              <a className="anchor" href="https://www.linkedin.com/in/alexisdrobles/" target="_blank" rel="noreferrer" tabIndex={9}>
                 <div className='btn linkedin'>
                   <p>linkedin</p>
                   <div className="decor linkedin-decor"></div>
@@ -59,7 +59,7 @@ function Footer() {
 
             {/* GitHub */}
             <motion.div className="motion-div" initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { delay: 0.04 }}} transition={{ opacity: { duration: 0.5 }, y: { duration: 0.3 }}}>
-              <a className="anchor" href="https://github.com/al3xisrobles" target="_blank" rel="noreferrer">
+              <a className="anchor" href="https://github.com/al3xisrobles" target="_blank" rel="noreferrer" tabIndex={10}>
                 <div className='btn github'>
                   <p>github</p>
                   <div className="decor github-decor"></div>
@@ -69,7 +69,7 @@ function Footer() {
 
             {/* Instagram */}
             <motion.div className="motion-div" initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1, transition: { delay: 0.06 }}} transition={{ opacity: { duration: 0.5 }, y: { duration: 0.3 }}}>
-              <a className="anchor" href="https://instagram.com/al3xisrobles" target="_blank" rel="noreferrer">
+              <a className="anchor" href="https://instagram.com/al3xisrobles" target="_blank" rel="noreferrer" tabIndex={11}>
                 <div className='btn insta'>
                   <p>instagram</p>
                   <div className="decor insta-decor"></div>

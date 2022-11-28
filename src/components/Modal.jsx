@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './css/Modal.css'
 import { AnimatePresence, motion } from "framer-motion"
 import Close from '../images/x.svg'
@@ -6,6 +6,15 @@ import Close from '../images/x.svg'
 function Modal(props) {
 
   const assets = require('../assets.js')
+
+  // Close modal if escape button is pressed (WCAG)
+  React.useEffect(() => {
+    window.addEventListener('keydown', (event) => {
+      if (event.key === "Escape") {
+        props.handleClick();
+      }
+    });
+  }, []);
 
   return (
     <>

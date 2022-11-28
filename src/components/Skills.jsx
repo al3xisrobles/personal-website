@@ -7,7 +7,7 @@ import SkillsBox from './SkillsBox'
 function Expertise() {
  return (
   <>
-    <div className="expertise">
+    <div className="skills">
 
       <motion.div className="title"
         initial={{ x: -50, opacity: 0 }}
@@ -48,7 +48,8 @@ function Expertise() {
       <motion.div className="resume-button"
         initial={{ x: -50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
-        transition={{ opacity: { duration: 0.5 }, x: { duration: 0.3 }}}>
+        transition={{ opacity: { duration: 0.5 }, x: { duration: 0.3 }}}
+        tabIndex={7}>
           <Resume/>
       </motion.div>
     </div>

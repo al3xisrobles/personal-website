@@ -37,6 +37,7 @@ function Projects() {
               text="NASA's Mars 2020 mission has sent a suite of cameras and Raman spectrometers (of relevance: SuperCam, SHERLOC, MastCam-Z, and the Remote Micro-Imager) aboard the Perseverance rover to the surface of Mars. These instruments generate large spectral and imaging datasets ripe for analyses with the aid of artificial neural networks. Machine learning methods facilitate autonomous rover decision-making on Mars, and improve and expedite scientific analysis on Earth, saving valuable mission resources. My team presents a lightweight multi-layer perceptron (MLP) and its standardized training dataset as a quick and accurate means of rock and mineral classification using images and spectra, either separately or in conjunction."
               buttonSrc="https://drive.google.com/file/d/1jV1F0A4wqArL8w1Qx5_OdbR654xvup3o/view?usp=sharing"
               buttonText="Read the Poster"/>}
+
             {secondOpened && !firstOpened &&
               <Modal title="Live Philanthropic Volleyball Tournament Bracket"
               imagePath={'tournament'}
@@ -53,6 +54,7 @@ function Projects() {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ opacity: { duration: 0.5 }, x: { duration: 0.3 }}}>
           <h1>My Projects</h1>
+          <div   className="projects-underline"></div>
         </motion.div>
 
         {/* Cards */}

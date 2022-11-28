@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Footer from '../components/Footer';
+import About from '../components/About';
 
 import LinkedIn from '../images/linkedin.png'
 import Github from '../images/github.png'
@@ -17,7 +18,7 @@ function Home() {
   const [anchorTarget, setAnchorTarget] = useState(null);
 
   useEffect(() => {
-    setAnchorTarget(document.getElementById('skills'));
+    setAnchorTarget(document.getElementById('about'));
   }, []);
 
   const handleClick = event => {
@@ -61,11 +62,6 @@ function Home() {
         <>
           <div className='body'>
 
-            {/* Warning above Navbar */}
-            <div className="in-prog">
-              <p>WARNING: THIS WEBSITE IS UNDER CONSTRUCTION</p>
-            </div>
-
             {/* Northwestern BG */}
             <div className='bg'></div>
 
@@ -76,8 +72,9 @@ function Home() {
                 animate={{ x: 0 }}
                 transition={{ x: { duration: 0.6} }}
                 onMouseEnter={() => setWebsiteLogo(!websiteLogo)}
-                onMouseLeave={() => setWebsiteLogo(!websiteLogo)}>
-                <a tabIndex={1} href="http://www.alexis-robles.com">
+                onMouseLeave={() => setWebsiteLogo(!websiteLogo)}
+                tabIndex={1}>
+                <a href="http://www.alexis-robles.com">
                 <AnimatePresence>
                   {!websiteLogo &&
                   <img src={WhiteLogo} alt="alexis-robles.com"></img>
@@ -90,19 +87,20 @@ function Home() {
               </motion.div>
               <div className='list-of-contents'>
                 <ul>
-                  <li tabIndex={2}><a href="#skills">// skills</a></li>
-                  <li tabIndex={3}><a href="#projects">// projects</a></li>
-                  <li tabIndex={4}><a href="#contact">// contact</a></li>
+                  <li tabIndex={2}><a href="#about">// about me</a></li>
+                  <li tabIndex={3}><a href="#skills">// skills</a></li>
+                  <li tabIndex={4}><a href="#projects">// projects</a></li>
+                  <li tabIndex={5}><a href="#contact">// contact</a></li>
                 </ul>
               </div>
               <motion.div className='socials'
                 initial={{ x: 150 }}
                 animate={{ x: 0 }}
                 transition={{ x: { duration: 0.6} }}>
-                <a tabIndex={5} href="https://www.linkedin.com/in/alexisdrobles/" target="_blank" rel="noreferrer">
+                <a href="https://www.linkedin.com/in/alexisdrobles/" target="_blank" rel="noreferrer" tabIndex={6}>
                   <img src={LinkedIn} alt="LinkedIn"/>
                 </a>
-                <a tabIndex={6} href="https://github.com/al3xisrobles" target="_blank" rel="noreferrer">
+                <a href="https://github.com/al3xisrobles" target="_blank" rel="noreferrer" tabIndex={6}>
                   <img src={Github} alt="Github"/>
                 </a>
               </motion.div>
@@ -116,7 +114,7 @@ function Home() {
                     <h1><span>HEY, </span><span>I'M </span><span>ALEXIS </span></h1>
                   </div>
                   <div className='hero-subtitle'>
-                    <p>I'm a software engineer studying at Northwestern University</p>
+                    <p>SOFTWARE ENGINEER AT NORTHWESTERN UNIVERSITY</p>
                   </div>
                   <a href="#skills" onClick={handleClick}>
                     <div className="bounce">
@@ -153,6 +151,9 @@ function Home() {
             {/* Page Sections */}
             <div className="sections">
               <div className="cut-margins">
+                <section id="about">
+                  <About/>
+                </section>
                 <section id="skills">
                   <Skills/>
                 </section>
@@ -177,7 +178,7 @@ function Home() {
 
                     <div className='left-slot-contents'>
                       <div className="menu-logo">
-                        <a tabIndex={1} href="#"
+                        <a href="#"
                           onMouseEnter={() => setWebsiteTitle(!websiteTitle)}
                           onMouseLeave={() => setWebsiteTitle(!websiteTitle)}>
                           <img src={BlackLogo} alt="alexis-robles.com"/>
@@ -202,6 +203,14 @@ function Home() {
                                     delay: 0
                                   }}}
                                   transition={{ opacity: { duration: 0.5 }, x: { duration: 0.3 }}}>
+                                    <a href="#about" rel="noreferrer">About Me</a>
+                        </motion.p>
+                        <motion.p onClick={() => setPlaceholder(!menuPlaceholder)}
+                                  initial={{ x: -50,opacity: 0 }}
+                                  whileInView={{ x: 0, opacity: 1, transition: {
+                                    delay: 0.03
+                                  }}}
+                                  transition={{ opacity: { duration: 0.5 }, x: { duration: 0.3 }}}>
                                     <a href="#skills" rel="noreferrer">Skills</a>
                         </motion.p>
                         <motion.p onClick={() => setPlaceholder(!menuPlaceholder)}
@@ -215,7 +224,7 @@ function Home() {
                         <motion.p onClick={() => setPlaceholder(!menuPlaceholder)}
                                   initial={{ x: -50,opacity: 0 }}
                                   whileInView={{ x: 0, opacity: 1, transition: {
-                                    delay: 0.06
+                                    delay: 0.09
                                   }}}
                                   transition={{ opacity: { duration: 0.5 }, x: { duration: 0.3 }}}>
                                     <a href="#content" rel="noreferrer">Contact Me</a>
@@ -225,7 +234,6 @@ function Home() {
                       <div className="left-footer">
                         <p><strong>Alexis Robles</strong></p>
                         <p><a href="mailto:alexis.robles49@gmail.com">alexis.robles49@gmail.com</a></p>
-                        <p>(781) 666 - 9422</p>
                       </div>
 
                     </div>
@@ -242,18 +250,18 @@ function Home() {
                       <div className='socials'>
                         <motion.div initial={{ x: 50, opacity: 0 }}
                                   whileInView={{ x: 0, opacity: 1, transition: {
-                                    delay: 0
+                                    delay: 0.05
                                   }}}
                                   transition={{ opacity: { duration: 0.5 }, x: { duration: 0.3 }}}>
                           <div className="social-tags">
                             <p>&lt;</p>
                             <p className="linkedin-closing-bracket">/&gt;</p>
                           </div>
-                          <p><a tabIndex={7} href="https://www.linkedin.com/in/alexisdrobles/" target="_blank" rel="noreferrer">linkedin</a></p>
+                          <p><a href="https://www.linkedin.com/in/alexisdrobles/" target="_blank" rel="noreferrer">linkedin</a></p>
                         </motion.div>
                         <motion.div initial={{ x: 50, opacity: 0 }}
                                   whileInView={{ x: 0, opacity: 1, transition: {
-                                    delay: 0.03
+                                    delay: 0.1
                                   }}}
                                   transition={{ opacity: { duration: 0.5 }, x: { duration: 0.3 }}}>
 
@@ -261,11 +269,11 @@ function Home() {
                             <p>&lt;</p>
                             <p className="github-closing-bracket">/&gt;</p>
                           </div>
-                          <p><a tabIndex={8} href="https://github.com/al3xisrobles" target="_blank" rel="noreferrer">github</a></p>
+                          <p><a href="https://github.com/al3xisrobles" target="_blank" rel="noreferrer">github</a></p>
                         </motion.div>
                         <motion.div initial={{ x: 50, opacity: 0 }}
                                   whileInView={{ x: 0, opacity: 1, transition: {
-                                    delay: 0.03
+                                    delay: 0.15
                                   }}}
                                   transition={{ opacity: { duration: 0.5 }, x: { duration: 0.3 }}}>
 
@@ -273,7 +281,7 @@ function Home() {
                             <p>&lt;</p>
                             <p className="insta-closing-bracket">/&gt;</p>
                           </div>
-                          <p><a tabIndex={9} href="https://instagram.com/al3xisrobles" target="_blank" rel="noreferrer">instagram</a></p>
+                          <p><a href="https://instagram.com/al3xisrobles" target="_blank" rel="noreferrer">instagram</a></p>
                         </motion.div>
                       </div>
                     </div>

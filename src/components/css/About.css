@@ -1,0 +1,81 @@
+.about-me {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 1800px;
+}
+
+.about-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-title h1 {
+  font-size: 5rem;
+  margin: 0;
+}
+
+.about-title p {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0;
+  font-style: italic;
+  background-image: linear-gradient(90deg, rgba(254, 98, 254, 1), rgba(253, 144, 45, 1));
+  background-clip: text;
+  color: transparent;
+}
+
+.about-text {
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-text p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.about-text a {
+  text-decoration: none;
+  color: transparent;
+}
+
+.about-text span {
+  font-weight: bold;
+  background-image: linear-gradient(90deg, rgb(254, 98, 173), rgba(253, 144, 45, 1));
+  background-clip: text;
+  color: transparent;
+  cursor: pointer;
+}
+
+.gradient {
+  position: absolute;
+  translate: none;
+  scale: .7;
+  opacity: 0.4;
+  width: 1200px;
+  z-index: -1;
+  top: 75%;
+  left: 20%;
+  right: 20%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .gradient {
+    animation: spin infinite 8s linear;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

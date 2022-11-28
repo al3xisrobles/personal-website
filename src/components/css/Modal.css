@@ -95,8 +95,8 @@
   width: fit-content;
   height: 3.2rem;
   background: linear-gradient(rgb(46, 48, 54), rgb(46, 48, 54)) padding-box,
-              linear-gradient(164deg, rgb(255, 226, 99) 20%, rgb(255, 123, 0) 100%) border-box;
-  border-radius: 20px;
+              linear-gradient(90deg, rgb(254, 98, 173), rgba(253, 144, 45, 1)) border-box;
+  border-radius: 10px;
   border: 2px solid transparent;
   display: flex;
   justify-content: center;
@@ -115,12 +115,11 @@
 
 .modal-button:hover {
   background: linear-gradient(transparent, transparent) padding-box,
-              linear-gradient(164deg, rgb(255, 226, 99) 20%, rgb(255, 123, 0) 100%) border-box;
+              linear-gradient(90deg, rgb(254, 98, 173), rgba(253, 144, 45, 1)) border-box;
 }
 
 .modal-button:hover p {
-  color: black;
-  font-weight: 400;
+  color: white;
 }
 
 .modal-button-link {

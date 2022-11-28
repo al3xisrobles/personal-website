@@ -6,16 +6,6 @@
   color: white;
 }
 
-.in-prog {
-  width: 100vw;
-  height: 40px;
-  background-color: #ff4000;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /*
     NAV BAR
               */
@@ -133,6 +123,7 @@ nav.top-nav .socials a img:hover {
     #eeeeee 0%,
     #ff8c00 29%,
     #ff4000 67%,
+    rgb(254, 98, 173) 85%,
     #fff800 100%
   );
   background-size: 400% auto;
@@ -200,9 +191,22 @@ nav.top-nav .socials a img:hover {
     SECTIONS
               */
 
+.sections {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .sections .cut-margins {
-  margin-left: 8vw;
-  margin-right: 8vw;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sections .cut-margins #about {
+  display: flex;
+  justify-content: center;
 }
 
 .sections #contact {
@@ -432,4 +436,9 @@ nav.top-nav .socials a img:hover {
 .right-menu-slot .right-slot-contents .socials .hidden-text p {
   color: transparent;
   margin: 0;
+}
+
+#about {
+  padding-top: 100px;
+  margin-bottom: 50px;
 }
