@@ -27,22 +27,26 @@ function Expertise() {
         <SkillsBox className="swe"
                     title="Software Engineering"
                     delay="0"
-                    text="Experienced in object-oriented and functional programming with Python, Java, C, C++, Racket, and MATLAB."/>
+                    text="Experienced in object-oriented and functional programming with Python, Java, C, C++, Racket, and MATLAB."
+                    aria-colindex="1"/>
 
         <SkillsBox className="frontend"
                     title="Frontend and UI/UX Design"
                     delay="0.03"
-                    text="Versed in HTML, CSS, JS, and the React.js framework. Passionate about graphic design with 3 years of professional experience."/>
+                    text="Versed in HTML, CSS, JS, and the React.js framework. Passionate about graphic design with 3 years of professional experience."
+                    aria-colindex="2"/>
 
         <SkillsBox className="cloud"
                     title="Cloud Infrastructure"
                     delay="0.06"
-                    text="Skilled in designing and implementing AWS cloud infrastructure architecture; learned from my time as an AWS SDE intern."/>
+                    text="Skilled in designing and implementing AWS cloud infrastructure architecture; learned from my time as an AWS SDE intern."
+                    aria-colindex="3"/>
 
         <SkillsBox className="ai"
                     title="Artificial Intelligence"
                     delay="0.09"
-                    text="Able to aquire and analyze data and create neural networks that facilitate autonomous decision-making."/>
+                    text="Able to aquire and analyze data and create neural networks that facilitate autonomous decision-making."
+                    aria-colindex="4"/>
       </motion.div>
 
       <motion.div className="resume-button"

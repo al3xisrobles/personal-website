@@ -73,7 +73,8 @@ function Home() {
                 transition={{ x: { duration: 0.6} }}
                 onMouseEnter={() => setWebsiteLogo(!websiteLogo)}
                 onMouseLeave={() => setWebsiteLogo(!websiteLogo)}
-                tabIndex={1}>
+                tabIndex={1}
+                aria-hidden="true">
                 <a href="http://www.alexis-robles.com">
                 <AnimatePresence>
                   {!websiteLogo &&
@@ -133,7 +134,8 @@ function Home() {
                   className="menu-close"
                   animate={ menuPlaceholder ? "closePlaceholderMenu" : "closePlaceholderClose" }
                   variants={ menuPlaceholderVariants }
-                  transition={{ y: { duration: 0.5} }}>
+                  transition={{ y: { duration: 0.5} }}
+                  aria-label="Close">
                     Close
                 </motion.p>
 
@@ -142,7 +144,8 @@ function Home() {
                   className="menu-menu"
                   animate={ menuPlaceholder ? "menuPlaceholderMenu" : "menuPlaceholderClose" }
                   variants={ menuPlaceholderVariants }
-                  transition={{ y: { duration: 0.5} }}>
+                  transition={{ y: { duration: 0.5} }}
+                  aria-label="Menu">
                     Menu
                 </motion.p>
               </div>
