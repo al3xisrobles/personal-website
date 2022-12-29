@@ -278,7 +278,7 @@ function Home() {
                                   whileInView={{ x: 0, opacity: 1, transition: {
                                     delay: 0.15
                                   }}}
-                                  transition={{ opacity: { duration: 0.5 }, x: { duration: 0.3 }}}>
+                                  transition={{ opacity: { duration: 0.5 }, x: { duration: 0.3 }, delay: 1}}>
 
                           <div className="social-tags">
                             <p>&lt;</p>

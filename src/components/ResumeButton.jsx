@@ -4,7 +4,7 @@ import './css/ResumeButton.css'
 function ResumeButton() {
   return (
     <>
-      <a className="button-link" href="https://drive.google.com/file/d/1tD3N-NGjc_vmG_AI5Z1NtXKs66NJOUSq/view?usp=sharing" target="_blank" rel="noreferrer">
+      <a className="button-link" href="https://drive.google.com/file/d/1UtDioAAZa2espX-2HpibJ2ZbD5HZzbIE/view?usp=share_link" target="_blank" rel="noreferrer">
         <div className="button">
           <p>Resume</p>
           <svg clip-rule="evenodd" class="resume-icon" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
