@@ -13,7 +13,7 @@ function Expertise() {
         initial={{ x: -50, opacity: 0 }}
         whileInView={{ x: 1, opacity: 1 }}
         transition={{ opacity: { duration: 0.5 }, x: { duration: 0.3 }}}>
-        <p>My Skills NEW</p>
+        <p>My Skills</p>
         <div className="orange-underline"></div>
       </motion.div>
 
