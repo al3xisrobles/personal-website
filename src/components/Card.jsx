@@ -11,7 +11,7 @@ function Card(props) {
       {/* Card */}
       <div className="card">
         <div className="img-section">
-          <img src={assets[props.imagePath]} alt="" style={{ objectPosition: pos}}/>
+          <img src={assets[props.imagePath]} alt="" style={{ objectPosition: pos }}/>
         </div>
 
         <div className="text-section">

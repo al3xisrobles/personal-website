@@ -8,16 +8,20 @@ function Projects() {
 
   const [firstOpened, setFirstOpened] = useState(false);
   const [secondOpened, setSecondOpened] = useState(false);
+  const [thirdOpened, setThirdOpened] = useState(false);
 
   function openClose(option) {
-    if (firstOpened || secondOpened) {
+    if (firstOpened || secondOpened || thirdOpened) {
       setFirstOpened(false);
       setSecondOpened(false);
+      setThirdOpened(false);
     } else {
       if (option === 1) {
         setFirstOpened(true);
-      } else {
+      } else if (option === 2) {
         setSecondOpened(true);
+      } else {
+        setThirdOpened(true);
       }
     }
   }
@@ -26,11 +30,11 @@ function Projects() {
     <>
       <div className="projects">
 
-        {(firstOpened || secondOpened) && <div className="close-wrap" onClick={() => firstOpened ? openClose(1) : openClose(2)}></div>}
+        {(firstOpened || secondOpened || thirdOpened) && <div className="close-wrap" onClick={openClose}></div>}
 
         {/* Modal */}
           <div className="modal-wrapper">
-            {firstOpened && !secondOpened &&
+            {firstOpened && !secondOpened && !thirdOpened &&
               <Modal title="Neural Networks on Remote Planetary Surfaces"
               imagePath={'sip'}
               handleClick={() => openClose(1)}
@@ -38,7 +42,7 @@ function Projects() {
               buttonSrc="https://drive.google.com/file/d/1jV1F0A4wqArL8w1Qx5_OdbR654xvup3o/view?usp=sharing"
               buttonText="Read the Poster"/>}
 
-            {secondOpened && !firstOpened &&
+            {secondOpened && !firstOpened && !thirdOpened &&
               <Modal title="Live Philanthropic Volleyball Tournament Bracket"
               imagePath={'tournament'}
               handleClick={() => openClose(2)}
@@ -46,6 +50,14 @@ function Projects() {
               a dynamic bracket UI for live user experience during a philanthropic volleyball tournament with React.js and Flask. Pictured to the left is the live bracket that participants of the tournament could visit on their mobile phone live to see how their team is doing. The web app was connected to a Google spreadsheet that was updated as the tournament went on."
               buttonSrc="https://github.com/al3xisrobles/Live-Tournament-Tracker"
               buttonText="Project Repo"/>}
+
+            {thirdOpened && !secondOpened && !firstOpened &&
+              <Modal title="Kappa Theta Pi Pre-Professional Technology Fraternity Website"
+              imagePath={'ktpPortal'}
+              handleClick={() => openClose(3)}
+              text="As VP of Technology, I developed Kappa Theta Pi’s website with React.js, Tailwind, and Firebase to communicate fraternity purpose and events through minimalistic design, as well as collaborated with the rest of the executive team to organize workshops, lead fraternity meetings, and facilitate the rush and professional development processes. I created an interactive member portal on the website through Firebase to enable scalable networking for members. Currently, I am spearheading a team of 30 undergraduate students in completing a semester-long independent project."
+              buttonSrc="https://www.ktpnu.com/"
+              buttonText="www.ktpnu.com"/>}
           </div>
 
         {/* Title */}
@@ -59,6 +71,20 @@ function Projects() {
 
         {/* Cards */}
         <div className="cards">
+          <motion.div onClick={() => openClose(2)}
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1, transition: {
+              delay: 0.1
+            }}}
+            transition={{ opacity: { duration: 0.5 }, x: { duration: 0.3 }}}
+            >
+            <Card imagePath = {'tournament'}
+                title="Live Philanthropic Volleyball Tournament Bracket"
+                subject="Web Development"
+                x="50"
+                y="50"/>
+          </motion.div>
+
           <motion.div onClick={() => openClose(1)}
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
@@ -70,15 +96,15 @@ function Projects() {
                 y="50"/>
           </motion.div>
 
-          <motion.div onClick={() => openClose(2)}
+          <motion.div onClick={() => openClose(3)}
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1, transition: {
               delay: 0.1
             }}}
             transition={{ opacity: { duration: 0.5 }, x: { duration: 0.3 }}}
             >
-            <Card imagePath = {'tournament'}
-                title="Live Philanthropic Volleyball Tournament Bracket"
+            <Card imagePath = {'ktpPortal'}
+                title="Pre-Professional Technology Fraternity Website"
                 subject="Web Development"
                 x="50"
                 y="50"/>
